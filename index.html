@@ -1,4 +1,158 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Kaynix AI Demo</title><meta name="build-hash" content="7b3edf9"><meta name="build-time" content="2025-07-02T01:08:25Z"><link rel="icon" href="favicon.ico" type="image/x-icon"><link href="/landing-page.3630632a229e50e7c4f1.css" rel="stylesheet"></head><body><h1>🤖 Kaynix Widget Bookmarklet</h1><p class="subtitle">Drag to bookmarks bar to test on any e-commerce site</p><div style="margin: 30px auto; text-align: center;"><h2 style="color: #4f46e5; margin-bottom: 20px;">📹 Watch How It Works</h2><div style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;"><iframe width="440" height="360" src="https://www.youtube.com/embed/s2ujvnn6XBw?rel=0&loop=1&playlist=s2ujvnn6XBw" title="Kaynix Widget Demo" style="border: 0; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p style="color: #6b7280; margin-top: 15px; font-size: 0.9rem;">Quick demo showing how to use the Kaynix AI widget on any e-commerce site</p></div><div class="step-container"><div class="step-title"><span class="step-number">1</span> Set Your API Key</div><p>Enter your Kaynix API key. This will be saved to your browser and used by the widget:</p><input type="password" id="apiKeyInput" class="api-key-input" placeholder="Enter your Kaynix API key..." autocomplete="off"><div class="success" id="apiKeySuccess">✅ API key saved! You can now proceed to the next steps.</div></div><div class="step-container"><div class="step-title"><span class="step-number">2</span> Drag Bookmarklet to Bookmarks Bar</div><p><strong>⚠️ Important:</strong> You must <strong>drag</strong> the button below to your browser's bookmarks bar. Clicking won't work!</p><div style="margin: 20px 0;"><a href="javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/AshKash/kaynix-artifacts@main/bookmarklet-loader.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button">🚀 Kaynix AI (Demo)</a></div><div class="warning">⚠️ <strong>For Users:</strong> Use the "Demo" version above. The Localhost version below is for developers only.</div><div style="margin: 20px 0;"><a href="javascript:(function(){window.KAYNIX_CONFIG={baseUrl:'http://localhost:8090'};var s=document.createElement('script');s.src='http://localhost:8090/bookmarklet-loader.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button localhost-button">🔧 Kaynix AI (Localhost - Developers Only)</a></div></div><div class="step-container"><div class="step-title"><span class="step-number">3</span> Visit Road Runner Sports</div><p>Click the link below to visit Road Runner Sports and search for HOKA running shoes:</p><a href="https://www.roadrunnersports.com/search/hoka+running+shoes" target="_blank" class="test-link">🏃‍♂️ Visit Road Runner Sports - HOKA Search</a><div class="tip">💡 This opens a search page for HOKA running shoes - perfect for testing the widget!</div></div><div class="step-container"><div class="step-title"><span class="step-number">4</span> Activate the Widget</div><p>On the Road Runner Sports page, click the <strong>Kaynix AI (Demo)</strong> bookmark you saved in Step 2.</p><p>You should see a chat icon appear in the bottom-right corner of the page.</p><div class="tip">💡 <strong>Try asking:</strong> "Which HOKA shoe is best for beginners?" or "What's the difference between these models?"</div></div><script>// Handle API key input
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Kaynix AI Demo</title><meta name="build-hash" content="7b3edf9"><meta name="build-time" content="2025-07-02T01:08:25Z"><link rel="icon" href="favicon.ico" type="image/x-icon"><style>body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f9fafb;
+        }
+        
+        h1 {
+            color: #1f2937;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.125rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .step-container {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .step-container:not([style*="display: none"]) {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .step-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .api-key-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+        
+        .api-key-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .success {
+            display: none;
+            color: #059669;
+            font-weight: 500;
+            margin-top: 12px;
+            padding: 12px;
+            background: #ecfdf5;
+            border-radius: 8px;
+        }
+        
+        .bookmarklet-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.2s;
+            cursor: move;
+        }
+        
+        .bookmarklet-button:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .localhost-button {
+            background: #374151;
+        }
+        
+        .localhost-button:hover {
+            background: #1f2937;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            color: #92400e;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            font-size: 0.875rem;
+        }
+        
+        .tip {
+            background: #dbeafe;
+            border: 1px solid #60a5fa;
+            color: #1e40af;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 0.875rem;
+        }
+        
+        .test-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #10b981;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-top: 12px;
+            transition: all 0.2s;
+        }
+        
+        .test-link:hover {
+            background: #059669;
+            transform: translateY(-1px);
+        }</style><link href="https://demo.kaynix.ai/landing-page.3630632a229e50e7c4f1.css" rel="stylesheet"></head><body><h1>🤖 Kaynix Widget Bookmarklet</h1><p class="subtitle">Drag to bookmarks bar to test on any e-commerce site</p><div style="text-align: center; margin: 30px 0;"><div id="progressMessage" style="color: #6b7280; font-size: 0.875rem;">Complete each step in order to set up your Kaynix AI widget</div></div><div style="margin: 30px auto; text-align: center;"><h2 style="color: #4f46e5; margin-bottom: 20px;">📹 Watch How It Works</h2><div style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;"><iframe width="440" height="360" src="https://www.youtube.com/embed/s2ujvnn6XBw?rel=0&loop=1&playlist=s2ujvnn6XBw" title="Kaynix Widget Demo" style="border: 0; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p style="color: #6b7280; margin-top: 15px; font-size: 0.9rem;">Quick demo showing how to use the Kaynix AI widget on any e-commerce site</p></div><div class="step-container"><div class="step-title"><span class="step-number">1</span> Set Your API Key</div><p>Enter your Kaynix API key to get started. This will be saved securely in your browser:</p><p style="font-size: 0.875rem; color: #6b7280; margin-top: 8px;">Don't have an API key? Get one from the <a href="#" style="color: #667eea;">Kaynix dashboard</a></p><input type="password" id="apiKeyInput" class="api-key-input" placeholder="Enter your Kaynix API key..." autocomplete="off"><div class="success" id="apiKeySuccess">✅ API key saved! You can now proceed to the next steps.</div></div><div class="step-container" id="bookmarkletStep" style="display: none;"><div class="step-title"><span class="step-number">2</span> Drag Bookmarklet to Bookmarks Bar</div><p><strong>⚠️ Important:</strong> You must <strong>drag</strong> the button below to your browser's bookmarks bar. Clicking won't work!</p><div style="margin: 20px 0;"><a href="javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/AshKash/kaynix-artifacts@main/bookmarklet-loader.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button" id="demoBookmarklet">🚀 Kaynix AI (Demo)</a></div><div class="warning">⚠️ <strong>For Users:</strong> Use the "Demo" version above. The Localhost version below is for developers only.</div><div id="localhostBookmarkletContainer" style="margin: 20px 0; display: none;"><a href="javascript:(function(){window.KAYNIX_CONFIG={baseUrl:'http://localhost:8090'};var s=document.createElement('script');s.src='http://localhost:8090/bookmarklet-loader-dev.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button localhost-button">🔧 Kaynix AI (Localhost - Developers Only)</a></div></div><div class="step-container" id="visitSiteStep" style="display: none;"><div class="step-title"><span class="step-number">3</span> Visit Road Runner Sports</div><p>Click the link below to visit Road Runner Sports and search for HOKA running shoes:</p><a href="https://www.roadrunnersports.com/search/hoka+running+shoes" target="_blank" class="test-link">🏃‍♂️ Visit Road Runner Sports - HOKA Search</a><div class="tip">💡 This opens a search page for HOKA running shoes - perfect for testing the widget!</div></div><div class="step-container" id="activateStep" style="display: none;"><div class="step-title"><span class="step-number">4</span> Activate the Widget</div><p>On the Road Runner Sports page, click the <strong>Kaynix AI (Demo)</strong> bookmark you saved in Step 2.</p><p>You should see a chat icon appear in the bottom-right corner of the page.</p><div class="tip">💡 <strong>Try asking:</strong> "Which HOKA shoe is best for beginners?" or "What's the difference between these models?"</div></div><script>// Handle API key input
         const apiKeyInput = document.getElementById('apiKeyInput');
         const apiKeySuccess = document.getElementById('apiKeySuccess');
 
@@ -7,24 +161,79 @@
         if (existingKey) {
             apiKeyInput.value = existingKey;
             apiKeySuccess.style.display = 'block';
+            // Show Step 2 if API key exists
+            document.getElementById('bookmarkletStep').style.display = 'block';
+            document.getElementById('progressMessage').textContent = '✅ API key found! Drag the bookmarklet to continue setup';
+            // Show localhost bookmarklet for developers
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                const localhostContainer = document.getElementById('localhostBookmarkletContainer');
+                if (localhostContainer) localhostContainer.style.display = 'block';
+            }
         }
 
-        // Save API key on input
+        // Save API key on input and update bookmarklet
         apiKeyInput.addEventListener('input', function () {
             const apiKey = this.value.trim();
             if (apiKey.length >= 10) { // Basic validation
                 localStorage.setItem('kaynix_api_key', apiKey);
                 apiKeySuccess.style.display = 'block';
+                updateBookmarklet(apiKey);
+                // Show Step 2 and hide Step 3 & 4
+                document.getElementById('bookmarkletStep').style.display = 'block';
+                document.getElementById('visitSiteStep').style.display = 'none';
+                document.getElementById('activateStep').style.display = 'none';
+                document.getElementById('progressMessage').textContent = '✅ Great! Now drag the bookmarklet to your bookmarks bar';
+                // Show localhost bookmarklet for developers
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                    const localhostContainer = document.getElementById('localhostBookmarkletContainer');
+                    if (localhostContainer) localhostContainer.style.display = 'block';
+                }
             } else {
                 apiKeySuccess.style.display = 'none';
                 if (apiKey.length === 0) {
                     localStorage.removeItem('kaynix_api_key');
                 }
+                updateBookmarklet(null);
+                // Hide subsequent steps
+                document.getElementById('bookmarkletStep').style.display = 'none';
+                document.getElementById('visitSiteStep').style.display = 'none';
+                document.getElementById('activateStep').style.display = 'none';
             }
         });
 
-        // Prevent clicking on bookmarklet buttons
+        function updateBookmarklet(apiKey) {
+            const demoBookmarklet = document.getElementById('demoBookmarklet');
+            const localBookmarklet = document.querySelector('.localhost-button');
+
+            if (apiKey) {
+                const demoScript = `javascript:(function(){window.KAYNIX_CONFIG={apiKey:'${apiKey}'};var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/AshKash/kaynix-artifacts@main/bookmarklet-loader.js?t='+Date.now();document.head.appendChild(s)})()`;
+                demoBookmarklet.href = demoScript;
+
+                const localScript = `javascript:(function(){window.KAYNIX_CONFIG={apiKey:'${apiKey}',baseUrl:'http://localhost:8090'};var s=document.createElement('script');s.src='http://localhost:8090/bookmarklet-loader-dev.js?t='+Date.now();document.head.appendChild(s)})()`;
+                localBookmarklet.href = localScript;
+            } else {
+                const alertScript = "javascript:(function(){alert('Please enter your API key first!')})()";
+                demoBookmarklet.href = alertScript;
+                localBookmarklet.href = alertScript;
+            }
+        }
+
+        // Initial update
+        updateBookmarklet(apiKeyInput.value.trim());
+
+        // Handle bookmarklet drag events
+        let dragStarted = false;
         document.querySelectorAll('.bookmarklet-button').forEach(button => {
+            button.addEventListener('dragstart', function(e) {
+                dragStarted = true;
+                // Show next steps when user starts dragging
+                setTimeout(() => {
+                    document.getElementById('visitSiteStep').style.display = 'block';
+                    document.getElementById('activateStep').style.display = 'block';
+                    document.getElementById('progressMessage').textContent = '🎉 Perfect! Now you can test the widget on any e-commerce site';
+                }, 100);
+            });
+            
             button.addEventListener('click', function (e) {
                 e.preventDefault();
                 alert('⚠️ Don\'t click! You must DRAG this button to your bookmarks bar.');
@@ -38,4 +247,4 @@
                 e.preventDefault();
                 alert('This bookmarklet is for developers only. Please use the "Demo" version above.');
             }
-        });</script><script defer="defer" src="/landing-page.31d6cfe0d16ae931b73c.js"></script></body></html>
+        });</script><script defer="defer" src="https://demo.kaynix.ai/landing-page.31d6cfe0d16ae931b73c.js"></script></body></html>

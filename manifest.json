@@ -1,23 +1,24 @@
 {
-  "kaynix-core.js": "/kaynix-core.316db972dfb26bb38ee2.js",
+  "kaynix-core.js": "/kaynix-core.f6771b477def1b7192a4.js",
   "landing-page.css": "/landing-page.3630632a229e50e7c4f1.css",
   "landing-page.js": "/landing-page.31d6cfe0d16ae931b73c.js",
-  "506.js": "/506.8ae59e2c02d45ee901f4.js",
-  "282.js": "/282.1f5bf5c87b8865141817.js",
-  "735.js": "/735.85b122696b154ed90593.js",
-  "12.js": "/12.592815afc43bd6097ed8.js",
-  "kaynix-common.js": "/kaynix-common.2497a00f49762b8d0d24.js",
+  "282.js": "/282.55a3c29d4454d268f30d.js",
+  "901.js": "/901.fcfb0f5e5e6212e4f8bd.js",
+  "12.js": "/12.a1ac9e073b9b333489dd.js",
+  "622.js": "/622.7584bd8b819f365f989e.js",
+  "kaynix-common.js": "/kaynix-common.51a9bcb8d65df4e9dab6.js",
   "index.html": "/index.html",
+  "adapters/roadrunnersports.com.js": "/adapters/roadrunnersports.com.js",
   "adapters/base-adapter.js": "/adapters/base-adapter.js",
   "adapters/backcountry.com.js": "/adapters/backcountry.com.js",
   "adapters/mcp-interface.js": "/adapters/mcp-interface.js",
   "adapters/academy.com.js": "/adapters/academy.com.js",
+  "adapters/shop.warriors.com.js": "/adapters/shop.warriors.com.js",
   "adapters/rei.com.js": "/adapters/rei.com.js",
-  "adapters/roadrunnersports.com.js": "/adapters/roadrunnersports.com.js",
   "adapters/localhost.js": "/adapters/localhost.js",
   "entrypoints": {
     "kaynix-core": [
-      "kaynix-core.316db972dfb26bb38ee2.js"
+      "kaynix-core.f6771b477def1b7192a4.js"
     ],
     "landing-page": [
       "landing-page.3630632a229e50e7c4f1.css",

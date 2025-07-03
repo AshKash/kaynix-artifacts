@@ -1,17 +1,18 @@
 {
   "adapters/academy.com.js": "sha384-M4ylmhFdQN+0M+x6ecbI+VoshPi0jE3g8sDI8hASschGT5p4hX86opUNfX6P4wLZ",
   "adapters/backcountry.com.js": "sha384-FbESY2VfWlKY1k69LpET2g9C3b+6470/jEZDSapdp72QrBabzsP81W+uVNTQsLoz",
-  "adapters/base-adapter.js": "sha384-2lqXXuzYbz6w9gjEEID07y+QP1qEt0Z54py3Au+WCrmH6VHcUrn5XAhffTZP8e1v",
+  "adapters/base-adapter.js": "sha384-dY4CD9ba9uhK8LtcErP2wYGa21kIGFwNOENYGQwKlHtltRnKp692Yore7cd3duh6",
   "adapters/localhost.js": "sha384-NpCpH+NaPi7mvUFutJfwe+prnURCOsbxsJ0v3cpzaRW6f9VcCoYkTaCA0N6lznGo",
   "adapters/mcp-interface.js": "sha384-2QNDVnTsYwFb3SqMqLVR6vTrELShi/wh35ZNeQpXtrjyttcQIvUZVH1rxzr2d222",
   "adapters/rei.com.js": "sha384-yshcyy4rAv1Do1KzhlkcRhnXrJ3odoYHfGXrTzmPH/10TgtNu7RTxye7x5yyw4I6",
-  "adapters/roadrunnersports.com.js": "sha384-tvPMjm5drqbA+p3PcqvwYVJLOntmzocqXnBe+DO0edbOzUzgZEhUCjz2ZsvfxPOz",
-  "kaynix-core.316db972dfb26bb38ee2.js": "sha384-YY5JNPxJybE29AkxYeD1Sj+X2KRUkjsSqn5pNGeEGIWiK8fxxcIb9tZutJdqhf6n",
+  "adapters/roadrunnersports.com.js": "sha384-Prw0NgNwUqQj0ngWRRSClCi2ui9XSNtDh7uLMfCejBMVAtjYFA+7LW7iq2U/wCNz",
+  "adapters/shop.warriors.com.js": "sha384-2kDR+GMUtMWg9LOj1MBWlLm8gnG2YoS9ODpQ+C/Jhac4VGW7sj1GKwp8pnNAN6vj",
+  "kaynix-core.f6771b477def1b7192a4.js": "sha384-anOwOMoFC3Du5YcaREKJQfWE0eKsZNYVG/V7N44Oo/yIVsQ1nS0Cxve+73RzuBx1",
   "landing-page.3630632a229e50e7c4f1.css": "sha384-9Rf4cbU+luGzl9iKPN7rUSVkMnLt3SZfFTZIW3q7kwyzouvT2OjN/LUr+8h0i+e/",
   "landing-page.31d6cfe0d16ae931b73c.js": "sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb",
-  "506.8ae59e2c02d45ee901f4.js": "sha384-JO1iZYWhSZV+iEvWveUmqWIklHuDpaKRzlbDQbJDqW/0C1bPnC2l1kGRLJ5vSykr",
-  "282.1f5bf5c87b8865141817.js": "sha384-E7gUHkoCdmFzLhxn2VgOjdo0jbz95rq28CWXhkNDu49EQJEF/GBwO3ry9wEo832s",
-  "735.85b122696b154ed90593.js": "sha384-7blLNbxFufVXRrhRssniM5GRfTFIaYJgJ7g/WzQ5TsdijR1HtptQwL5Qto/zfRaG",
-  "12.592815afc43bd6097ed8.js": "sha384-mOAu6keZBk6ncOyZa7GmVs7L/c7rYx2h3E2kXeNrth6nE7N6bNfxccL6KCX/Pfq/",
-  "kaynix-common.2497a00f49762b8d0d24.js": "sha384-aR1A6mwMaCnsti5ULPOXYS7nCi5thcBVZO2zJw8UZ/IkmEICCnhrluxWaJ455RW1"
+  "282.55a3c29d4454d268f30d.js": "sha384-zOtGuH8d5+qvcqbQS8TefY83cj1Tc4HufCati1ptUf0qB1DcbIgPsbVI5JcI5cJ3",
+  "901.fcfb0f5e5e6212e4f8bd.js": "sha384-Vef4j6smh/MH4Gd2rTscqDA28a2tzVd4S+lDJgz7Nt+QM29sP9bmovismGEr73CD",
+  "12.a1ac9e073b9b333489dd.js": "sha384-NrxU7iMIT77YB0pGqnQThganzqcIY/YwrPVh39Dx2etBl2AgoAmSAa9v3VtLOj6O",
+  "622.7584bd8b819f365f989e.js": "sha384-WOd3OQf/Un8Sx9gmUkf330pMMqzW8v6Ej1RPK554qQGKoBlUpPICU8KyszJfSDJk",
+  "kaynix-common.51a9bcb8d65df4e9dab6.js": "sha384-/muEzZwu9Zb6ho6BEaJvX98JtHq5wHfFmlbbQi8WPIy6aO+M4UhPAUDPOTYt6w2/"
 }
