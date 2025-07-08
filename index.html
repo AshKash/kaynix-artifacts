@@ -5,21 +5,21 @@
             padding: 40px 20px;
             background: #f9fafb;
         }
-        
+
         h1 {
             color: #1f2937;
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             text-align: center;
         }
-        
+
         .subtitle {
             color: #6b7280;
             font-size: 1.125rem;
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .step-container {
             background: white;
             border-radius: 12px;
@@ -28,11 +28,11 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .step-container:not([style*="display: none"]) {
             animation: fadeIn 0.3s ease;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -43,7 +43,7 @@
                 transform: translateY(0);
             }
         }
-        
+
         .step-title {
             display: flex;
             align-items: center;
@@ -53,7 +53,7 @@
             color: #1f2937;
             margin-bottom: 16px;
         }
-        
+
         .step-number {
             background: #667eea;
             color: white;
@@ -65,7 +65,7 @@
             justify-content: center;
             font-size: 1rem;
         }
-        
+
         .api-key-input {
             width: 100%;
             padding: 12px 16px;
@@ -74,12 +74,12 @@
             font-size: 1rem;
             margin-top: 8px;
         }
-        
+
         .api-key-input:focus {
             outline: none;
             border-color: #667eea;
         }
-        
+
         .success {
             display: none;
             color: #059669;
@@ -89,7 +89,7 @@
             background: #ecfdf5;
             border-radius: 8px;
         }
-        
+
         .error {
             display: none;
             color: #b91c1c;
@@ -99,7 +99,7 @@
             background: #fee2e2;
             border-radius: 8px;
         }
-        
+
         .bookmarklet-button {
             display: inline-block;
             padding: 16px 32px;
@@ -112,21 +112,21 @@
             transition: all 0.2s;
             cursor: move;
         }
-        
+
         .bookmarklet-button:hover {
             background: #5a67d8;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
-        
+
         .localhost-button {
             background: #374151;
         }
-        
+
         .localhost-button:hover {
             background: #1f2937;
         }
-        
+
         .warning {
             background: #fef3c7;
             border: 1px solid #fbbf24;
@@ -136,7 +136,7 @@
             margin: 16px 0;
             font-size: 0.875rem;
         }
-        
+
         .tip {
             background: #dbeafe;
             border: 1px solid #60a5fa;
@@ -146,7 +146,7 @@
             margin-top: 12px;
             font-size: 0.875rem;
         }
-        
+
         .test-link {
             display: inline-block;
             padding: 12px 24px;
@@ -158,7 +158,7 @@
             margin-top: 12px;
             transition: all 0.2s;
         }
-        
+
         .test-link:hover {
             background: #059669;
             transform: translateY(-1px);
@@ -176,11 +176,11 @@
             }
 
             console.log(`[Kaynix] Validating API key...`);
-            
+
             const isProduction = window.location.hostname === 'demo.kaynix.ai';
             const baseUrl = isProduction ? 'https://api.kaynix.ai' : 'http://localhost:8080';
-            const validationUrl = `${baseUrl}/api/v1/validate`; 
-            
+            const validationUrl = `${baseUrl}/api/v1/validate`;
+
             console.log(`[Kaynix] Using validation URL: ${validationUrl}`);
             console.log(`[Kaynix] Hostname: ${window.location.hostname}, isProduction: ${isProduction}`);
 
@@ -195,11 +195,11 @@
                 });
 
                 console.log(`[Kaynix] Response status: ${response.status}`);
-                
+
                 if (response.ok) {
                     const data = await response.json();
                     console.log(`[Kaynix] Response data:`, data);
-                    
+
                     if (data.status === 'success') {
                         console.log('[Kaynix] API key is valid.');
                         return { success: true };
@@ -213,7 +213,7 @@
                     try {
                         const errorData = await response.json();
                         message = errorData.message || errorData.detail || message;
-                    } catch (e) { 
+                    } catch (e) {
                         console.log(`[Kaynix] Could not parse error response`);
                     }
                     console.log(`[Kaynix] Validation error: ${message}`);
@@ -228,13 +228,13 @@
         apiKeyInput.addEventListener('input', function () {
             clearTimeout(validationTimeout);
             const apiKey = this.value.trim();
-            
+
             console.log(`[Kaynix] API key input changed, length: ${apiKey.length}`);
 
             apiKeySuccess.style.display = 'none';
             apiKeyError.style.display = 'none';
             bookmarkletStep.style.display = 'none';
-            
+
             // Also hide steps 3 and 4
             const visitSiteStep = document.getElementById('visitSiteStep');
             const activateStep = document.getElementById('activateStep');
@@ -252,19 +252,19 @@
                 console.log('[Kaynix] Starting validation...');
                 const result = await validateApiKey(apiKey);
                 console.log('[Kaynix] Validation result:', result);
-                
+
                 if (result.success) {
                     console.log('[Kaynix] Validation successful, updating UI');
                     localStorage.setItem('kaynix_api_key', apiKey);
                     apiKeySuccess.style.display = 'block';
                     bookmarkletStep.style.display = 'block';
-                    
+
                     // Also show remaining steps
                     const visitSiteStep = document.getElementById('visitSiteStep');
                     const activateStep = document.getElementById('activateStep');
                     if (visitSiteStep) visitSiteStep.style.display = 'block';
                     if (activateStep) activateStep.style.display = 'block';
-                    
+
                     updateBookmarklet(apiKey);
                     console.log('[Kaynix] UI updated successfully');
                 } else {
@@ -289,7 +289,7 @@
 
                 const localScript = `javascript:(function(){window.KAYNIX_CONFIG={apiKey:'${apiKey}',baseUrl:'http://localhost:8080'};var s=document.createElement('script');s.src='http://localhost:8090/bookmarklet-loader-dev.js?t='+Date.now();document.head.appendChild(s)})()`;
                 if(localBookmarklet) localBookmarklet.href = localScript;
-                
+
                 // Show localhost bookmarklet only if on localhost AND API key is valid
                 if (localhostContainer && isLocalhost) {
                     localhostContainer.style.display = 'block';
@@ -298,7 +298,7 @@
                 const alertScript = "javascript:(function(){alert('Please enter a valid API key first!')})()";
                 demoBookmarklet.href = alertScript;
                 if(localBookmarklet) localBookmarklet.href = alertScript;
-                
+
                 // Hide localhost bookmarklet when API key is invalid
                 if (localhostContainer) {
                     localhostContainer.style.display = 'none';
@@ -309,7 +309,7 @@
         // Initial state
         const existingKey = localStorage.getItem('kaynix_api_key');
         console.log('[Kaynix] Checking for existing API key on page load...');
-        
+
         if (existingKey) {
             console.log(`[Kaynix] Found existing API key, length: ${existingKey.length}`);
             apiKeyInput.value = existingKey;
@@ -318,13 +318,13 @@
                 if(result.success) {
                     apiKeySuccess.style.display = 'block';
                     bookmarkletStep.style.display = 'block';
-                    
+
                     // Show all steps on initial load with valid key
                     const visitSiteStep = document.getElementById('visitSiteStep');
                     const activateStep = document.getElementById('activateStep');
                     if (visitSiteStep) visitSiteStep.style.display = 'block';
                     if (activateStep) activateStep.style.display = 'block';
-                    
+
                     updateBookmarklet(existingKey);
                 } else {
                     console.log('[Kaynix] Existing key validation failed');
