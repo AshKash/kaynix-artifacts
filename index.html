@@ -199,6 +199,9 @@
             console.log(`[Kaynix] Using validation URL: ${validationUrl}`);
             console.log(`[Kaynix] Hostname: ${window.location.hostname}, isProduction: ${isProduction}`);
 
+            // Force browser to repaint before making the request
+            await new Promise(resolve => requestAnimationFrame(resolve));
+
             try {
                 console.log(`[Kaynix] Sending validation request...`);
                 const response = await fetch(validationUrl, {
@@ -252,7 +255,6 @@
 
             apiKeySuccess.style.display = 'none';
             apiKeyError.style.display = 'none';
-            apiKeyVerifying.style.display = 'none';
             bookmarkletStep.style.display = 'none';
 
             // Also hide steps 3 and 4
@@ -261,11 +263,19 @@
             if (visitSiteStep) visitSiteStep.style.display = 'none';
             if (activateStep) activateStep.style.display = 'none';
 
+            // Show verifying immediately if there's an API key
+            if (apiKey) {
+                apiKeyVerifying.style.display = 'block';
+            } else {
+                apiKeyVerifying.style.display = 'none';
+            }
+
             validationTimeout = setTimeout(async () => {
                 if (!apiKey) {
                     console.log('[Kaynix] API key is empty, clearing stored key');
                     localStorage.removeItem('kaynix_api_key');
                     updateBookmarklet(null);
+                    apiKeyVerifying.style.display = 'none';
                     return;
                 }
 

@@ -1,9 +1,9 @@
 {
-  "kaynix-core.js": "/kaynix-core.084a47f52947e25d5a3a.js",
+  "kaynix-core.js": "/kaynix-core.4dd1bb7bff31919cd903.js",
   "landing-page.css": "/landing-page.3630632a229e50e7c4f1.css",
   "landing-page.js": "/landing-page.31d6cfe0d16ae931b73c.js",
   "282.js": "/282.55a3c29d4454d268f30d.js",
-  "116.js": "/116.8dcd5c732cfec33e1e99.js",
+  "116.js": "/116.91715e9df452f302629f.js",
   "12.js": "/12.a1ac9e073b9b333489dd.js",
   "622.js": "/622.7584bd8b819f365f989e.js",
   "461.js": "/461.44239524802535d7ec0b.js",
@@ -32,7 +32,7 @@
   "adapters/localhost.js": "/adapters/localhost.js",
   "entrypoints": {
     "kaynix-core": [
-      "kaynix-core.084a47f52947e25d5a3a.js"
+      "kaynix-core.4dd1bb7bff31919cd903.js"
     ],
     "landing-page": [
       "landing-page.3630632a229e50e7c4f1.css",
