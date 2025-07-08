@@ -1,5 +1,5 @@
 {
-  "kaynix-core.js": "/kaynix-core.590770a0488048095209.js",
+  "kaynix-core.js": "/kaynix-core.084a47f52947e25d5a3a.js",
   "landing-page.css": "/landing-page.3630632a229e50e7c4f1.css",
   "landing-page.js": "/landing-page.31d6cfe0d16ae931b73c.js",
   "282.js": "/282.55a3c29d4454d268f30d.js",
@@ -32,7 +32,7 @@
   "adapters/localhost.js": "/adapters/localhost.js",
   "entrypoints": {
     "kaynix-core": [
-      "kaynix-core.590770a0488048095209.js"
+      "kaynix-core.084a47f52947e25d5a3a.js"
     ],
     "landing-page": [
       "landing-page.3630632a229e50e7c4f1.css",

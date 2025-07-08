@@ -100,6 +100,16 @@
             border-radius: 8px;
         }
 
+        .verifying {
+            display: none;
+            color: #2563eb;
+            font-weight: 500;
+            margin-top: 12px;
+            padding: 12px;
+            background: #dbeafe;
+            border-radius: 8px;
+        }
+
         .bookmarklet-button {
             display: inline-block;
             padding: 16px 32px;
@@ -162,16 +172,21 @@
         .test-link:hover {
             background: #059669;
             transform: translateY(-1px);
-        }</style><link href="https://demo.kaynix.ai/landing-page.3630632a229e50e7c4f1.css" rel="stylesheet"></head><body><h1>🤖 Kaynix Widget Bookmarklet</h1><div style="text-align: center; margin: 30px 0;"><div id="progressMessage" style="color: #6b7280; font-size: 0.875rem;">Complete each step in order to set up your Kaynix AI widget</div></div><div style="margin: 30px auto; text-align: center;"><h2 style="color: #4f46e5; margin-bottom: 20px;">📹 Watch How It Works</h2><div style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;"><iframe width="634" height="518" src="https://www.youtube.com/embed/s2ujvnn6XBw?rel=0&loop=1&playlist=s2ujvnn6XBw" title="Kaynix Widget Demo" style="border: 0; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p style="color: #6b7280; margin-top: 15px; font-size: 0.9rem;">Quick demo showing how to use the Kaynix AI widget on any e-commerce site</p></div><div class="step-container"><div class="step-title"><span class="step-number">1</span> Set Your API Key</div><p>Enter your Kaynix API key to get started. This will be saved securely in your browser:</p><p style="font-size: 0.875rem; color: #6b7280; margin-top: 8px;">Don't have an API key? Get one from the <a href="#" style="color: #667eea;">Kaynix dashboard</a></p><input type="password" id="apiKeyInput" class="api-key-input" placeholder="Enter your Kaynix API key..." autocomplete="off"><div class="success" id="apiKeySuccess">✅ API key saved! You can now proceed to the next steps.</div><div class="error" id="apiKeyError">❌ Invalid API key. Please check your key and try again.</div></div><div class="step-container" id="bookmarkletStep" style="display: none;"><div class="step-title"><span class="step-number">2</span> Drag Bookmarklet to Bookmarks Bar</div><p><strong>⚠️ Important:</strong> You must <strong>drag</strong> the button below to your browser's bookmarks bar. Clicking won't work!</p><div style="margin: 20px 0;"><a href="javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/AshKash/kaynix-artifacts@main/bookmarklet-loader.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button" id="demoBookmarklet">🚀 Kaynix AI (Demo)</a></div><div class="warning">⚠️ <strong>For Users:</strong> Use the "Demo" version above. The Localhost version below is for developers only.</div><div id="localhostBookmarkletContainer" style="margin: 20px 0; display: none;"><a href="javascript:(function(){window.KAYNIX_CONFIG={baseUrl:'http://localhost:8080'};var s=document.createElement('script');s.src='http://localhost:8090/bookmarklet-loader-dev.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button localhost-button">🔧 Kaynix AI (Localhost - Developers Only)</a></div></div><div class="step-container" id="visitSiteStep" style="display: none;"><div class="step-title"><span class="step-number">3</span> Visit Road Runner Sports</div><p>Click the link below to visit Road Runner Sports and search for HOKA running shoes:</p><a href="https://www.roadrunnersports.com/search/hoka+running+shoes" target="_blank" class="test-link">🏃‍♂️ Visit Road Runner Sports - HOKA Search</a><div class="tip">💡 This opens a search page for HOKA running shoes - perfect for testing the widget!</div></div><div class="step-container" id="activateStep" style="display: none;"><div class="step-title"><span class="step-number">4</span> Activate the Widget</div><p>On the Road Runner Sports page, click the <strong>Kaynix AI (Demo)</strong> bookmark you saved in Step 2.</p><p>You should see a chat icon appear in the bottom-right corner of the page.</p><div class="tip">💡 <strong>Try asking:</strong> "Which HOKA shoe is best for beginners?" or "What's the difference between these models?"</div></div><script>const apiKeyInput = document.getElementById('apiKeyInput');
+        }</style><link href="landing-page.3630632a229e50e7c4f1.css" rel="stylesheet"></head><body><h1>🤖 Kaynix Widget Bookmarklet</h1><div style="text-align: center; margin: 30px 0;"><div id="progressMessage" style="color: #6b7280; font-size: 0.875rem;">Complete each step in order to set up your Kaynix AI widget</div></div><div style="margin: 30px auto; text-align: center;"><h2 style="color: #4f46e5; margin-bottom: 20px;">📹 Watch How It Works</h2><div style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;"><iframe width="634" height="518" src="https://www.youtube.com/embed/s2ujvnn6XBw?rel=0&loop=1&playlist=s2ujvnn6XBw" title="Kaynix Widget Demo" style="border: 0; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p style="color: #6b7280; margin-top: 15px; font-size: 0.9rem;">Quick demo showing how to use the Kaynix AI widget on any e-commerce site</p></div><div class="step-container"><div class="step-title"><span class="step-number">1</span> Set Your API Key</div><p>Enter your Kaynix API key to get started. This will be saved securely in your browser:</p><p style="font-size: 0.875rem; color: #6b7280; margin-top: 8px;">Don't have an API key? Get one from the <a href="#" style="color: #667eea;">Kaynix dashboard</a></p><input type="password" id="apiKeyInput" class="api-key-input" placeholder="Enter your Kaynix API key..." autocomplete="off"><div class="success" id="apiKeySuccess">✅ API key saved! You can now proceed to the next steps.</div><div class="error" id="apiKeyError">❌ Invalid API key. Please check your key and try again.</div><div class="verifying" id="apiKeyVerifying">🔄 Verifying API key...</div></div><div class="step-container" id="bookmarkletStep" style="display: none;"><div class="step-title"><span class="step-number">2</span> Drag Bookmarklet to Bookmarks Bar</div><p><strong>⚠️ Important:</strong> You must <strong>drag</strong> the button below to your browser's bookmarks bar. Clicking won't work!</p><div style="margin: 20px 0;"><a href="javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/AshKash/kaynix-artifacts@main/bookmarklet-loader.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button" id="demoBookmarklet">🚀 Kaynix AI (Demo)</a></div><div class="warning">⚠️ <strong>For Users:</strong> Use the "Demo" version above. The Localhost version below is for developers only.</div><div id="localhostBookmarkletContainer" style="margin: 20px 0; display: none;"><a href="javascript:(function(){window.KAYNIX_CONFIG={baseUrl:'http://localhost:8080'};var s=document.createElement('script');s.src='http://localhost:8090/bookmarklet-loader-dev.js?t='+Date.now();document.head.appendChild(s)})()" class="bookmarklet-button localhost-button">🔧 Kaynix AI (Localhost - Developers Only)</a></div></div><div class="step-container" id="visitSiteStep" style="display: none;"><div class="step-title"><span class="step-number">3</span> Visit Road Runner Sports</div><p>Click the link below to visit Road Runner Sports and search for HOKA running shoes:</p><a href="https://www.roadrunnersports.com/search/hoka+running+shoes" target="_blank" class="test-link">🏃‍♂️ Visit Road Runner Sports - HOKA Search</a><div class="tip">💡 This opens a search page for HOKA running shoes - perfect for testing the widget!</div></div><div class="step-container" id="activateStep" style="display: none;"><div class="step-title"><span class="step-number">4</span> Activate the Widget</div><p>On the Road Runner Sports page, click the <strong>Kaynix AI (Demo)</strong> bookmark you saved in Step 2.</p><p>You should see a chat icon appear in the bottom-right corner of the page.</p><div class="tip">💡 <strong>Try asking:</strong> "Which HOKA shoe is best for beginners?" or "What's the difference between these models?"</div></div><script>const apiKeyInput = document.getElementById('apiKeyInput');
         const apiKeySuccess = document.getElementById('apiKeySuccess');
         const apiKeyError = document.getElementById('apiKeyError');
+        const apiKeyVerifying = document.getElementById('apiKeyVerifying');
         const bookmarkletStep = document.getElementById('bookmarkletStep');
         let validationTimeout;
 
         // REAL API VALIDATION
         async function validateApiKey(apiKey) {
+            // Show verifying state
+            apiKeySuccess.style.display = 'none';
             apiKeyError.style.display = 'none';
+            apiKeyVerifying.style.display = 'block';
             if (!apiKey) {
+                apiKeyVerifying.style.display = 'none';
                 return { success: false, message: 'API key cannot be empty.' };
             }
 
@@ -202,10 +217,12 @@
 
                     if (data.status === 'success') {
                         console.log('[Kaynix] API key is valid.');
+                        apiKeyVerifying.style.display = 'none';
                         return { success: true };
                     } else {
                         const message = data.message || 'Validation failed.';
                         console.log(`[Kaynix] Validation failed: ${message}`);
+                        apiKeyVerifying.style.display = 'none';
                         return { success: false, message: message };
                     }
                 } else {
@@ -217,10 +234,12 @@
                         console.log(`[Kaynix] Could not parse error response`);
                     }
                     console.log(`[Kaynix] Validation error: ${message}`);
+                    apiKeyVerifying.style.display = 'none';
                     return { success: false, message: message };
                 }
             } catch (error) {
                 console.error('[Kaynix] Network error during API key validation:', error);
+                apiKeyVerifying.style.display = 'none';
                 return { success: false, message: 'Could not connect to the validation server.' };
             }
         }
@@ -233,6 +252,7 @@
 
             apiKeySuccess.style.display = 'none';
             apiKeyError.style.display = 'none';
+            apiKeyVerifying.style.display = 'none';
             bookmarkletStep.style.display = 'none';
 
             // Also hide steps 3 and 4
@@ -334,4 +354,4 @@
             console.log('[Kaynix] No existing API key found');
         }
 
-        // Localhost bookmarklet visibility is now controlled by updateBookmarklet function</script><script defer="defer" src="https://demo.kaynix.ai/landing-page.31d6cfe0d16ae931b73c.js"></script></body></html>
+        // Localhost bookmarklet visibility is now controlled by updateBookmarklet function</script><script defer="defer" src="landing-page.31d6cfe0d16ae931b73c.js"></script></body></html>
