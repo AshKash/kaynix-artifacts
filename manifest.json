@@ -1,24 +1,26 @@
 {
-  "kaynix-core.js": "/kaynix-core.4f544d37d4c7d7645633.js",
+  "kaynix-core.js": "/kaynix-core.2d387209779c78c06633.js",
   "landing-page.css": "/landing-page.3630632a229e50e7c4f1.css",
   "landing-page.js": "/landing-page.31d6cfe0d16ae931b73c.js",
   "282.js": "/282.55a3c29d4454d268f30d.js",
-  "116.js": "/116.bdf310e5ae8a49c35023.js",
+  "116.js": "/116.67d39bde265c9b297bb2.js",
   "12.js": "/12.a1ac9e073b9b333489dd.js",
   "622.js": "/622.7584bd8b819f365f989e.js",
   "461.js": "/461.44239524802535d7ec0b.js",
-  "981.js": "/981.dc6ebc3ce045c897d907.js",
+  "981.js": "/981.ffdf72a2a51ea3c15032.js",
   "617.js": "/617.dbc5adc7025bea044772.js",
   "735.js": "/735.bbc9c90ccee7e0e876c6.js",
+  "853.js": "/853.8de57203d2cf7eb36a68.js",
   "481.js": "/481.9efb425d82a8c310aa8e.js",
-  "kaynix-common.js": "/kaynix-common.4005a4fd84647028f72a.js",
+  "kaynix-common.js": "/kaynix-common.a1038dae22deaaeb5a29.js",
   "index.html": "/index.html",
-  "adapters/shop.warriors.com.js": "/adapters/shop.warriors.com.js",
   "adapters/burghardtsportinggoods.com.js": "/adapters/burghardtsportinggoods.com.js",
   "adapters/base-adapter.js": "/adapters/base-adapter.js",
+  "adapters/shop.warriors.com.js": "/adapters/shop.warriors.com.js",
   "adapters/lakersstore.com.js": "/adapters/lakersstore.com.js",
   "adapters/online-sports-shop.co.uk.js": "/adapters/online-sports-shop.co.uk.js",
   "adapters/roadrunnersports.com.js": "/adapters/roadrunnersports.com.js",
+  "adapters/allbirds.com.js": "/adapters/allbirds.com.js",
   "adapters/backcountry.com.js": "/adapters/backcountry.com.js",
   "adapters/mcp-interface.js": "/adapters/mcp-interface.js",
   "adapters/academy.com.js": "/adapters/academy.com.js",
@@ -26,7 +28,7 @@
   "adapters/localhost.js": "/adapters/localhost.js",
   "entrypoints": {
     "kaynix-core": [
-      "kaynix-core.4f544d37d4c7d7645633.js"
+      "kaynix-core.2d387209779c78c06633.js"
     ],
     "landing-page": [
       "landing-page.3630632a229e50e7c4f1.css",
